@@ -1,0 +1,264 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.23.13",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "8f35c4f38925578240105fdffd02b4ba",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"pytorch-quantization\">PyTorch Quantization</h1></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "37089081a62aec093f90eecf67115ef3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"basic-setup\">Basic Setup</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "d384ba48bc43ecaad170e8639e6360f8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "PyTorch Version: 2.12.1\nDevice used: cuda\nShould skip CPU evaluations: False\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "04a5c2b1792728a507b19b4df81c37d9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "d0b55859d7c7b7f3ee04f39ee5a39a2f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"get-cifar-10-train-and-test-sets\">Get CIFAR-10 train and test sets</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dFLQ",
+      "code_hash": "0862fc19599d24bb24265007fe28ed3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x79195019f790&gt;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "7c8e727e2dbdd4b00850884ade33e1ee",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "48fb14cfe38044b396cbb5ef99da0d63",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"adjust-resnet18-network-for-cifar-10-dataset\">Adjust ResNet18 network for CIFAR-10 dataset</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "b41066f46c5c236e3ddf559581b1692a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "11524686558fefce980950e6455fbe67",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"define-train-and-evaluate-functions\">Define Train and Evaluate Functions</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "f1e063427ec481855e1140e979528949",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "71ade1e0fba4124122547f178a4527ad",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"define-helper-functions-to-measure-latency\">Define helper functions to measure latency</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "8ac44c5cf3d15f08b1beda26b6b6c079",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "a9ab528cf49ef1a62e957ce8c5885147",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"train-full-model\">Train full model</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "2387cf5077e3ac3104773dbee913e08a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 1: loss=1.0354\nAccuracy (Epoch 1): 60.81%\nEpoch 2: loss=1.2003\nAccuracy (Epoch 2): 66.49%\nEpoch 3: loss=0.5788\nAccuracy (Epoch 3): 70.62%\nEpoch 4: loss=0.3390\nAccuracy (Epoch 4): 71.58%\nEpoch 5: loss=0.2100\nAccuracy (Epoch 5): 72.85%\nEpoch 6: loss=0.2411\nAccuracy (Epoch 6): 71.18%\nEpoch 7: loss=0.1287\nAccuracy (Epoch 7): 73.76%\nEpoch 8: loss=0.2272\nAccuracy (Epoch 8): 74.53%\nEpoch 9: loss=0.0143\nAccuracy (Epoch 9): 76.58%\nEpoch 10: loss=0.0363\nAccuracy (Epoch 10): 75.73%\nEpoch 11: loss=0.0209\nAccuracy (Epoch 11): 78.26%\nEpoch 12: loss=0.0086\nAccuracy (Epoch 12): 79.42%\nEpoch 13: loss=0.0016\nAccuracy (Epoch 13): 80.10%\nEpoch 14: loss=0.0001\nAccuracy (Epoch 14): 80.11%\nEpoch 15: loss=0.0005\nAccuracy (Epoch 15): 80.23%\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "98402119d6c1e260d719e9bb77ee0200",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"evaluate-full-model\">Evaluate full model</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "0c0f7d78edf993efa0c8478d8faa511a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Size (full): 44.77 MB\nAccuracy (full): 80.23%\nLatency (full, on CPU): 492.64 \u00b1 27.27 ms\nLatency (full, on GPU): 26.17 \u00b1 0.11 ms\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}
