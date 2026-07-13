@@ -124,6 +124,7 @@ def _(DataLoader, Subset, datasets, g, set_seed, transforms):
         datasets.CIFAR10(root="./data", train=True, download=True, transform=transform),
         batch_size=128,
         shuffle=True,
+        num_workers=0,
         generator=g,
     )
 
@@ -132,7 +133,7 @@ def _(DataLoader, Subset, datasets, g, set_seed, transforms):
         datasets.CIFAR10(root="./data", train=False, download=True, transform=transform),
         batch_size=128,
         shuffle=False,
-        num_workers=2,
+        num_workers=0,
         drop_last=True,
         generator=g,
     )
@@ -145,39 +146,13 @@ def _(DataLoader, Subset, datasets, g, set_seed, transforms):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ## Adjust ResNet18 network for CIFAR-10 dataset
-    """)
-    return
-
-
-@app.cell
-def _(device, models, nn):
-    def get_resnet18_for_cifar10():
-        """
-        Returns a ResNet-18 model adjusted for CIFAR-10:
-        - 3x3 conv with stride 1
-        - No max pooling
-        - 10 output classes
-        """
-        model = models.resnet18(weights=None, num_classes=10)
-        model.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
-        model.maxpool = nn.Identity()
-        return model.to(device)
-
-    return (get_resnet18_for_cifar10,)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
     ## Define Train and Evaluate Functions
     """)
     return
 
 
 @app.cell
-def _(device, mo, nn, test_loader, torch):
-    @mo.persistent_cache
+def _(device, nn, test_loader, torch):
     def train(model, loader, epochs, lr=0.01, silent=False):
         """
         Trains a model with SGD and cross-entropy loss.
@@ -336,10 +311,32 @@ def _(mo):
 
 
 @app.cell
-def _(get_resnet18_for_cifar10, set_seed, train, train_loader):
+def _(device, mo, models, nn, train, train_loader):
+    @mo.persistent_cache
+    def get_fully_trained_model(epochs: int = 15):
+        def get_resnet18_for_cifar10():
+            """
+            Returns a ResNet-18 model adjusted for CIFAR-10:
+            - 3x3 conv with stride 1
+            - No max pooling
+            - 10 output classes
+            """
+            model = models.resnet18(weights=None, num_classes=10)
+            model.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
+            model.maxpool = nn.Identity()
+            return model.to(device)
+
+        model_to_quantize = get_resnet18_for_cifar10()
+        return train(model_to_quantize, train_loader, epochs=epochs)
+
+    return (get_fully_trained_model,)
+
+
+@app.cell
+def _(get_fully_trained_model, set_seed):
     set_seed(42)
-    model_to_quantize = get_resnet18_for_cifar10()
-    model_to_quantize = train(model_to_quantize, train_loader, epochs=15)
+
+    model_to_quantize = get_fully_trained_model(15)
     return (model_to_quantize,)
 
 

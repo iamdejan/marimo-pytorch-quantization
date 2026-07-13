@@ -97,7 +97,7 @@
         {
           "type": "data",
           "data": {
-            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x713776576030&gt;</pre>"
+            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x72e804697b90&gt;</pre>"
           }
         }
       ],
@@ -105,33 +105,7 @@
     },
     {
       "id": "SFPL",
-      "code_hash": "42f15bdae3141b1e294a6a6bd428eb82",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "BYtC",
-      "code_hash": "48fb14cfe38044b396cbb5ef99da0d63",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"adjust-resnet18-network-for-cifar-10-dataset\">Adjust ResNet18 network for CIFAR-10 dataset</h2></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "RGSE",
-      "code_hash": "b41066f46c5c236e3ddf559581b1692a",
+      "code_hash": "88f098dacbbfeb1132b2175603dc7bd1",
       "outputs": [
         {
           "type": "data",
@@ -157,7 +131,7 @@
     },
     {
       "id": "emfo",
-      "code_hash": "f1e063427ec481855e1140e979528949",
+      "code_hash": "32d379445c297f030cfa3b09501ff1d7",
       "outputs": [
         {
           "type": "data",
@@ -208,8 +182,21 @@
       "console": []
     },
     {
+      "id": "TFrA",
+      "code_hash": "3f14b9a1ffb8a86214c3ee2073b06b50",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "ZHCJ",
-      "code_hash": "2387cf5077e3ac3104773dbee913e08a",
+      "code_hash": "5bd752cde2df334eb9dcbebd00f30bec",
       "outputs": [
         {
           "type": "data",
@@ -222,7 +209,7 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1: loss=1.2041\nAccuracy (Epoch 1): 57.90%\nEpoch 2: loss=0.7263\nAccuracy (Epoch 2): 62.57%\nEpoch 3: loss=0.7141\nAccuracy (Epoch 3): 72.28%\nEpoch 4: loss=0.5116\nAccuracy (Epoch 4): 70.46%\nEpoch 5: loss=0.3497\nAccuracy (Epoch 5): 72.81%\nEpoch 6: loss=0.2524\nAccuracy (Epoch 6): 73.45%\nEpoch 7: loss=0.1587\nAccuracy (Epoch 7): 75.35%\nEpoch 8: loss=0.0113\nAccuracy (Epoch 8): 74.10%\nEpoch 9: loss=0.0695\nAccuracy (Epoch 9): 77.08%\nEpoch 10: loss=0.0486\nAccuracy (Epoch 10): 77.36%\nEpoch 11: loss=0.0194\nAccuracy (Epoch 11): 78.04%\nEpoch 12: loss=0.0011\nAccuracy (Epoch 12): 79.64%\nEpoch 13: loss=0.0043\nAccuracy (Epoch 13): 80.14%\nEpoch 14: loss=0.0004\nAccuracy (Epoch 14): 80.20%\nEpoch 15: loss=0.0004\nAccuracy (Epoch 15): 80.41%\n",
+          "text": "Epoch 1: loss=1.1391\nAccuracy (Epoch 1): 61.47%\nEpoch 2: loss=0.5330\nAccuracy (Epoch 2): 67.73%\nEpoch 3: loss=0.6939\nAccuracy (Epoch 3): 71.33%\nEpoch 4: loss=0.3693\nAccuracy (Epoch 4): 73.71%\nEpoch 5: loss=0.3905\nAccuracy (Epoch 5): 73.45%\nEpoch 6: loss=0.3286\nAccuracy (Epoch 6): 71.70%\nEpoch 7: loss=0.1739\nAccuracy (Epoch 7): 75.66%\nEpoch 8: loss=0.0465\nAccuracy (Epoch 8): 74.29%\nEpoch 9: loss=0.0578\nAccuracy (Epoch 9): 76.87%\nEpoch 10: loss=0.0321\nAccuracy (Epoch 10): 76.81%\nEpoch 11: loss=0.0139\nAccuracy (Epoch 11): 78.68%\nEpoch 12: loss=0.0107\nAccuracy (Epoch 12): 78.33%\nEpoch 13: loss=0.0055\nAccuracy (Epoch 13): 79.46%\nEpoch 14: loss=0.0009\nAccuracy (Epoch 14): 79.98%\nEpoch 15: loss=0.0007\nAccuracy (Epoch 15): 80.33%\n",
           "mimetype": "text/plain"
         }
       ]
@@ -255,7 +242,7 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Size (full): 44.77 MB\nAccuracy (full): 80.41%\nLatency (full, on CPU): 613.22 \u00b1 60.56 ms\nLatency (full, on GPU): 26.21 \u00b1 0.22 ms\n",
+          "text": "Size (full): 44.77 MB\nAccuracy (full): 80.33%\nLatency (full, on CPU): 532.62 \u00b1 22.09 ms\nLatency (full, on GPU): 26.25 \u00b1 0.46 ms\n",
           "mimetype": "text/plain"
         }
       ]
