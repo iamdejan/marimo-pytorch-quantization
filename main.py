@@ -104,14 +104,17 @@ def _(mo):
 
 
 @app.cell
-def _(torch):
+def _(set_seed, torch):
+    set_seed(42)
     g = torch.Generator()
     g.manual_seed(42)
     return (g,)
 
 
 @app.cell
-def _(DataLoader, Subset, datasets, g, transforms):
+def _(DataLoader, Subset, datasets, g, set_seed, transforms):
+    set_seed(42)
+
     transform = transforms.Compose(
         [transforms.Resize(32), transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))]
     )
