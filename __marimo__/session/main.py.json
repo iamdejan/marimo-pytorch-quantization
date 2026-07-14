@@ -8,14 +8,7 @@
     {
       "id": "Hbol",
       "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "outputs": [],
       "console": []
     },
     {
@@ -46,35 +39,14 @@
     },
     {
       "id": "bkHC",
-      "code_hash": "d384ba48bc43ecaad170e8639e6360f8",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "PyTorch Version: 2.12.1\nDevice used: cuda\nShould skip CPU evaluations: False\n",
-          "mimetype": "text/plain"
-        }
-      ]
+      "code_hash": "4c4c4614f4671df61b9ba1668b49cdc6",
+      "outputs": [],
+      "console": []
     },
     {
       "id": "lEQa",
       "code_hash": "04a5c2b1792728a507b19b4df81c37d9",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "outputs": [],
       "console": []
     },
     {
@@ -93,31 +65,17 @@
     {
       "id": "Xref",
       "code_hash": "9b5a8938b2653adffdd983f1a5849c75",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x772323723e50&gt;</pre>"
-          }
-        }
-      ],
+      "outputs": [],
       "console": []
     },
     {
       "id": "SFPL",
       "code_hash": "88f098dacbbfeb1132b2175603dc7bd1",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "outputs": [],
       "console": []
     },
     {
-      "id": "ygfh",
+      "id": "BYtC",
       "code_hash": "48fb14cfe38044b396cbb5ef99da0d63",
       "outputs": [
         {
@@ -130,20 +88,13 @@
       "console": []
     },
     {
-      "id": "AUxx",
-      "code_hash": "b41066f46c5c236e3ddf559581b1692a",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "id": "RGSE",
+      "code_hash": "4d82e6bb79f969679fecb7a97d2b63d0",
+      "outputs": [],
       "console": []
     },
     {
-      "id": "BYtC",
+      "id": "Kclp",
       "code_hash": "11524686558fefce980950e6455fbe67",
       "outputs": [
         {
@@ -156,20 +107,13 @@
       "console": []
     },
     {
-      "id": "RGSE",
-      "code_hash": "e22e2a731900c897212492eca2355543",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "id": "emfo",
+      "code_hash": "40e63db2172bd1d03466b35374f62a80",
+      "outputs": [],
       "console": []
     },
     {
-      "id": "Kclp",
+      "id": "Hstk",
       "code_hash": "71ade1e0fba4124122547f178a4527ad",
       "outputs": [
         {
@@ -182,20 +126,13 @@
       "console": []
     },
     {
-      "id": "emfo",
+      "id": "nWHF",
       "code_hash": "8ac44c5cf3d15f08b1beda26b6b6c079",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "outputs": [],
       "console": []
     },
     {
-      "id": "Hstk",
+      "id": "iLit",
       "code_hash": "a9ab528cf49ef1a62e957ce8c5885147",
       "outputs": [
         {
@@ -208,40 +145,19 @@
       "console": []
     },
     {
-      "id": "aISJ",
-      "code_hash": "bf9ea07b28ff5204ea2eb1606c6882c8",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/html": "<pre class='text-xs'>CompletedProcess(args=[&#x27;mkdir&#x27;, &#x27;-p&#x27;, &#x27;models&#x27;], returncode=0, stdout=&#x27;&#x27;, stderr=&#x27;&#x27;)</pre>"
-          }
-        }
-      ],
+      "id": "ZHCJ",
+      "code_hash": "bb2894814388648b55a66478082f8f50",
+      "outputs": [],
       "console": []
     },
     {
-      "id": "nWHF",
+      "id": "ROlb",
       "code_hash": "f11bfc0001cf227da1288356708af0b8",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 1: loss=1.0588\nAccuracy (Epoch 1): 54.56%\nEpoch 2: loss=0.9853\nAccuracy (Epoch 2): 68.89%\nEpoch 3: loss=0.5539\nAccuracy (Epoch 3): 72.16%\nEpoch 4: loss=0.5111\nAccuracy (Epoch 4): 72.32%\nEpoch 5: loss=0.2018\nAccuracy (Epoch 5): 71.97%\nEpoch 6: loss=0.2016\nAccuracy (Epoch 6): 73.79%\nEpoch 7: loss=0.2253\nAccuracy (Epoch 7): 74.32%\nEpoch 8: loss=0.0664\nAccuracy (Epoch 8): 69.29%\nEpoch 9: loss=0.0884\nAccuracy (Epoch 9): 76.37%\nEpoch 10: loss=0.0177\nAccuracy (Epoch 10): 77.05%\nEpoch 11: loss=0.0172\nAccuracy (Epoch 11): 78.46%\nEpoch 12: loss=0.0056\nAccuracy (Epoch 12): 78.22%\nEpoch 13: loss=0.0018\nAccuracy (Epoch 13): 79.54%\nEpoch 14: loss=0.0013\nAccuracy (Epoch 14): 79.91%\nEpoch 15: loss=0.0002\nAccuracy (Epoch 15): 79.75%\nTraining complete. Model saved to ./models/full_model.pth\n",
-          "mimetype": "text/plain"
-        }
-      ]
+      "outputs": [],
+      "console": []
     },
     {
-      "id": "ZHCJ",
+      "id": "qnkX",
       "code_hash": "98402119d6c1e260d719e9bb77ee0200",
       "outputs": [
         {
@@ -254,27 +170,13 @@
       "console": []
     },
     {
-      "id": "ROlb",
-      "code_hash": "0c0f7d78edf993efa0c8478d8faa511a",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Size (full): 44.77 MB\nAccuracy (full): 79.75%\nLatency (full, on CPU): 550.90 \u00b1 30.45 ms\nLatency (full, on GPU): 26.84 \u00b1 0.05 ms\n",
-          "mimetype": "text/plain"
-        }
-      ]
+      "id": "TqIu",
+      "code_hash": "5939b480a62685692cba5c2ac3524f85",
+      "outputs": [],
+      "console": []
     },
     {
-      "id": "LBMM",
+      "id": "Vxnm",
       "code_hash": "dcc26fb14a9b2c2910257ea41698b6b4",
       "outputs": [
         {
@@ -287,24 +189,16 @@
       "console": []
     },
     {
-      "id": "iZkl",
-      "code_hash": "374e933df252a1d53e8f80c2f00eaf59",
-      "outputs": [
-        {
-          "type": "error",
-          "ename": "exception",
-          "evalue": "module 'torch.export' has no attribute 'export_for_training'",
-          "traceback": null
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_5339/__marimo__cell_iZkl_.py&quot;</span>, line <span class=\"m\">16</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">exported_model</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">export</span><span class=\"o\">.</span><span class=\"n\">export_for_training</span><span class=\"p\">(</span><span class=\"n\">model_to_quantize</span><span class=\"p\">,</span> <span class=\"n\">example_inputs</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">module</span><span class=\"p\">()</span>\n<span class=\"w\">                     </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n<span class=\"gr\">AttributeError</span>: <span class=\"n\">module &#39;torch.export&#39; has no attribute &#39;export_for_training&#39;</span>\n</pre></div>\n</span>",
-          "mimetype": "application/vnd.marimo+traceback"
-        }
-      ]
+      "id": "DnEU",
+      "code_hash": "bb5c0f3fa5fce730c6862846bb62ad04",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "48aa0f5b93b0c43c37fed379ef999d57",
+      "outputs": [],
+      "console": []
     }
   ]
 }

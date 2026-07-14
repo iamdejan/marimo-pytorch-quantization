@@ -32,14 +32,10 @@ def _():
     import os
     import time
     import warnings
-    from packaging import version
     import numpy as np
     import torch
     import torch.nn as nn
     from torchvision import datasets, transforms, models
-    from torch.quantization import quantize_dynamic
-    from torch.ao.quantization import get_default_qconfig, QConfigMapping
-    from torch.ao.quantization.quantize_fx import prepare_fx, convert_fx
     from torch.utils.data import DataLoader, Subset
 
     # ignores irrelevant warning, see: https://github.com/pytorch/pytorch/issues/149829
@@ -70,7 +66,6 @@ def _():
         time,
         torch,
         transforms,
-        version,
     )
 
 
@@ -164,6 +159,7 @@ def _(device, models, nn):
         model = models.resnet18(weights=None, num_classes=10)
         model.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
         model.maxpool = nn.Identity()
+
         return model.to(device)
 
     return (get_resnet18_for_cifar10,)
@@ -193,7 +189,7 @@ def _(device, nn, os, test_loader, torch):
         if os.path.exists(save_path):
             if not silent:
                 print(f"Model already trained. Loading from {save_path}")
-            model.load_state_dict(torch.load(save_path))
+            model.load_state_dict(torch.load(save_path), strict=True)
             return
 
         # no saved model found. training from given model state
@@ -383,7 +379,7 @@ def _(
     print_size_of_model(model_to_quantize, "full")
 
     # evaluate full accuracy
-    accuracy_full = evaluate(model_to_quantize, "full")
+    evaluate(model_to_quantize, "full")
 
     # estimate full model latency
     estimate_latency_full(model_to_quantize, "full", skip_cpu)
@@ -407,52 +403,52 @@ def _(mo):
 
 
 @app.cell
-def _(calibration_loader, model_to_quantize, torch, version):
-    from torchao.quantization.pt2e.quantize_pt2e import (
-        prepare_pt2e,
-        convert_pt2e,
-    )
+def _(calibration_loader, model_to_quantize, torch):
+    from torch.ao.quantization import QConfigMapping, get_default_qconfig
+    from torch.ao.quantization.quantize_fx import prepare_fx, convert_fx
 
-    import torchao.quantization.pt2e.quantizer.x86_inductor_quantizer as xiq
-    from torchao.quantization.pt2e.quantizer.x86_inductor_quantizer import X86InductorQuantizer
+    # Ensure model is on CPU for x86 quantization engine calibration
+    model_to_quantize.cpu()
+    model_to_quantize.eval()
 
-    model_to_quantize.to("cpu")
+    # 1. Map the configuration targeting x86 CPU architectures
+    # This handles both Conv2d and Linear blocks natively
+    qconfig_mapping = QConfigMapping().set_global(get_default_qconfig("x86"))
 
-    # batch of 128 images, each with 3 color channels and 32x32 resolution (CIFAR-10)
-    example_inputs = (torch.rand(128, 3, 32, 32).to("cpu"),)
+    # 2. Prepare the model (fuses modules like Conv+BN and inserts observers)
+    example_inputs = (torch.rand(128, 3, 32, 32),)
+    prepared_model = prepare_fx(model_to_quantize, qconfig_mapping, example_inputs)
 
-    # export the model to a standardized format before quantization
-    if version.parse(torch.__version__) >= version.parse("2.5"):  # for pytorch 2.5+
-        exported_model = torch.export.export_for_training(model_to_quantize, example_inputs).module()
-    else:  # for pytorch 2.4
-        from torch._export import capture_pre_autograd_graph
-
-        exported_model = capture_pre_autograd_graph(model_to_quantize, example_inputs)
-
-    # quantization setup for X86 Inductor Quantizer
-    quantizer = X86InductorQuantizer()
-    quantizer.set_global(xiq.get_default_x86_inductor_quantization_config())
-
-    # preparing for PTQ by folding batch-norm into preceding conv2d operators, and inserting observers in appropriate places
-    prepared_model = prepare_pt2e(exported_model, quantizer)
-
-    # run inference on calibration data to collect activation stats needed for activation quantization
+    # 3. Calibrate the model using your activation statistics data loader
     def calibrate(model, data_loader):
-        torch.ao.quantization.move_exported_model_to_eval(model)
         with torch.no_grad():
-            for image in data_loader:
-                model(image.to("cpu"))
+            for images, _ in data_loader:
+                model(images.cpu())
 
     calibrate(prepared_model, calibration_loader)
 
-    # converts calibrated model to a quantized model
-    quantized_model = convert_pt2e(prepared_model)
+    # 4. Convert the observed weights to actual INT8 precision layers
+    quantized_model = convert_fx(prepared_model)
+    return (quantized_model,)
 
-    # export again to remove unused weights after quantization
-    if version.parse(torch.__version__) >= version.parse("2.5"):  # for pytorch 2.5+
-        quantized_model = torch.export.export_for_training(quantized_model, example_inputs).module()
-    else:  # for pytorch 2.4
-        quantized_model = capture_pre_autograd_graph(quantized_model, example_inputs)
+
+@app.cell
+def _(
+    estimate_latency_full,
+    evaluate,
+    print_size_of_model,
+    quantized_model,
+    skip_cpu,
+):
+    # get quantized model size
+    print_size_of_model(quantized_model, "quantized")
+
+    # evaluate quantized accuracy
+    evaluate(quantized_model, 'quantized')
+
+    # estimate quantized model latency
+    estimate_latency_full(quantized_model, 'quantized', skip_cpu)
+
     return
 
 
