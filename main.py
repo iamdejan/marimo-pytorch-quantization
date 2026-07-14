@@ -70,6 +70,7 @@ def _():
         time,
         torch,
         transforms,
+        version,
     )
 
 
@@ -140,7 +141,32 @@ def _(DataLoader, Subset, datasets, g, set_seed, transforms):
 
     calibration_dataset = Subset(train_dataset, range(256))
     calibration_loader = DataLoader(calibration_dataset, batch_size=128, shuffle=False)
-    return test_loader, train_loader
+    return calibration_loader, test_loader, train_loader
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Adjust ResNet18 network for CIFAR-10 dataset
+    """)
+    return
+
+
+@app.cell
+def _(device, models, nn):
+    def get_resnet18_for_cifar10():
+        """
+        Returns a ResNet-18 model adjusted for CIFAR-10:
+        - 3x3 conv with stride 1
+        - No max pooling
+        - 10 output classes
+        """
+        model = models.resnet18(weights=None, num_classes=10)
+        model.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
+        model.maxpool = nn.Identity()
+        return model.to(device)
+
+    return (get_resnet18_for_cifar10,)
 
 
 @app.cell(hide_code=True)
@@ -152,8 +178,8 @@ def _(mo):
 
 
 @app.cell
-def _(device, nn, test_loader, torch):
-    def train(model, loader, epochs, lr=0.01, silent=False):
+def _(device, nn, os, test_loader, torch):
+    def train(model, loader, epochs, lr=0.01, save_path="model.pth", silent=False):
         """
         Trains a model with SGD and cross-entropy loss.
         Loads from save_path if it exists.
@@ -163,6 +189,14 @@ def _(device, nn, test_loader, torch):
             model.train()
         except NotImplementedError:
             torch.ao.quantization.move_exported_model_to_train(model)
+
+        if os.path.exists(save_path):
+            if not silent:
+                print(f"Model already trained. Loading from {save_path}")
+            model.load_state_dict(torch.load(save_path))
+            return
+
+        # no saved model found. training from given model state
 
         criterion = nn.CrossEntropyLoss()
         optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=0.9)
@@ -181,7 +215,11 @@ def _(device, nn, test_loader, torch):
                     model.train()
                 except NotImplementedError:
                     torch.ao.quantization.move_exported_model_to_train(model)
-        return model
+
+        if save_path:
+            torch.save(model.state_dict(), save_path)
+            if not silent:
+                print(f"Training complete. Model saved to {save_path}")
 
     def evaluate(model, tag):
         """
@@ -311,32 +349,18 @@ def _(mo):
 
 
 @app.cell
-def _(device, mo, models, nn, train, train_loader):
-    @mo.persistent_cache
-    def get_fully_trained_model(epochs: int = 15):
-        def get_resnet18_for_cifar10():
-            """
-            Returns a ResNet-18 model adjusted for CIFAR-10:
-            - 3x3 conv with stride 1
-            - No max pooling
-            - 10 output classes
-            """
-            model = models.resnet18(weights=None, num_classes=10)
-            model.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
-            model.maxpool = nn.Identity()
-            return model.to(device)
+def _():
+    import subprocess
 
-        model_to_quantize = get_resnet18_for_cifar10()
-        return train(model_to_quantize, train_loader, epochs=epochs)
-
-    return (get_fully_trained_model,)
+    subprocess.run(["mkdir", "-p", "models"], capture_output=True, text=True)
+    return
 
 
 @app.cell
-def _(get_fully_trained_model, set_seed):
+def _(get_resnet18_for_cifar10, set_seed, train, train_loader):
     set_seed(42)
-
-    model_to_quantize = get_fully_trained_model(15)
+    model_to_quantize = get_resnet18_for_cifar10()
+    train(model_to_quantize, train_loader, epochs=15, save_path="./models/full_model.pth")
     return (model_to_quantize,)
 
 
@@ -363,6 +387,72 @@ def _(
 
     # estimate full model latency
     estimate_latency_full(model_to_quantize, "full", skip_cpu)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Post Training Quantization (PTQ)
+
+    The basic flow is as follow:
+
+    1. Export the model to to a stable, backend-agnostic format that’s suitable for transformations, optimizations, and deployment.
+    2. Define the quantizer that will prepare the model for quantization. Here I used the X86 for CPU deployments, but there is a simple variant that works better for mobile and edge devices working on ARM CPUs.
+    3. Preparing the model for quantization. For example, folding batch-norm into preceding conv2d operators, and inserting observers in appropriate places to collect activation statistics needed for calibration.
+    4. Running inference on calibration data to collect activation statistics
+    5. Converts calibrated model to a quantized model. While the quantized model already takes less space, it is not yet optimized for the final deployment.
+    """)
+    return
+
+
+@app.cell
+def _(calibration_loader, model_to_quantize, torch, version):
+    from torchao.quantization.pt2e.quantize_pt2e import (
+        prepare_pt2e,
+        convert_pt2e,
+    )
+
+    import torchao.quantization.pt2e.quantizer.x86_inductor_quantizer as xiq
+    from torchao.quantization.pt2e.quantizer.x86_inductor_quantizer import X86InductorQuantizer
+
+    model_to_quantize.to("cpu")
+
+    # batch of 128 images, each with 3 color channels and 32x32 resolution (CIFAR-10)
+    example_inputs = (torch.rand(128, 3, 32, 32).to("cpu"),)
+
+    # export the model to a standardized format before quantization
+    if version.parse(torch.__version__) >= version.parse("2.5"):  # for pytorch 2.5+
+        exported_model = torch.export.export_for_training(model_to_quantize, example_inputs).module()
+    else:  # for pytorch 2.4
+        from torch._export import capture_pre_autograd_graph
+
+        exported_model = capture_pre_autograd_graph(model_to_quantize, example_inputs)
+
+    # quantization setup for X86 Inductor Quantizer
+    quantizer = X86InductorQuantizer()
+    quantizer.set_global(xiq.get_default_x86_inductor_quantization_config())
+
+    # preparing for PTQ by folding batch-norm into preceding conv2d operators, and inserting observers in appropriate places
+    prepared_model = prepare_pt2e(exported_model, quantizer)
+
+    # run inference on calibration data to collect activation stats needed for activation quantization
+    def calibrate(model, data_loader):
+        torch.ao.quantization.move_exported_model_to_eval(model)
+        with torch.no_grad():
+            for image in data_loader:
+                model(image.to("cpu"))
+
+    calibrate(prepared_model, calibration_loader)
+
+    # converts calibrated model to a quantized model
+    quantized_model = convert_pt2e(prepared_model)
+
+    # export again to remove unused weights after quantization
+    if version.parse(torch.__version__) >= version.parse("2.5"):  # for pytorch 2.5+
+        quantized_model = torch.export.export_for_training(quantized_model, example_inputs).module()
+    else:  # for pytorch 2.4
+        quantized_model = capture_pre_autograd_graph(quantized_model, example_inputs)
     return
 
 

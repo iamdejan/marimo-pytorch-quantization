@@ -97,7 +97,7 @@
         {
           "type": "data",
           "data": {
-            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x72e804697b90&gt;</pre>"
+            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x772323723e50&gt;</pre>"
           }
         }
       ],
@@ -117,7 +117,33 @@
       "console": []
     },
     {
-      "id": "Kclp",
+      "id": "ygfh",
+      "code_hash": "48fb14cfe38044b396cbb5ef99da0d63",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"adjust-resnet18-network-for-cifar-10-dataset\">Adjust ResNet18 network for CIFAR-10 dataset</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "AUxx",
+      "code_hash": "b41066f46c5c236e3ddf559581b1692a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
       "code_hash": "11524686558fefce980950e6455fbe67",
       "outputs": [
         {
@@ -130,8 +156,8 @@
       "console": []
     },
     {
-      "id": "emfo",
-      "code_hash": "32d379445c297f030cfa3b09501ff1d7",
+      "id": "RGSE",
+      "code_hash": "e22e2a731900c897212492eca2355543",
       "outputs": [
         {
           "type": "data",
@@ -143,7 +169,7 @@
       "console": []
     },
     {
-      "id": "Hstk",
+      "id": "Kclp",
       "code_hash": "71ade1e0fba4124122547f178a4527ad",
       "outputs": [
         {
@@ -156,7 +182,7 @@
       "console": []
     },
     {
-      "id": "nWHF",
+      "id": "emfo",
       "code_hash": "8ac44c5cf3d15f08b1beda26b6b6c079",
       "outputs": [
         {
@@ -169,7 +195,7 @@
       "console": []
     },
     {
-      "id": "iLit",
+      "id": "Hstk",
       "code_hash": "a9ab528cf49ef1a62e957ce8c5885147",
       "outputs": [
         {
@@ -182,21 +208,21 @@
       "console": []
     },
     {
-      "id": "TFrA",
-      "code_hash": "3f14b9a1ffb8a86214c3ee2073b06b50",
+      "id": "aISJ",
+      "code_hash": "bf9ea07b28ff5204ea2eb1606c6882c8",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/plain": ""
+            "text/html": "<pre class='text-xs'>CompletedProcess(args=[&#x27;mkdir&#x27;, &#x27;-p&#x27;, &#x27;models&#x27;], returncode=0, stdout=&#x27;&#x27;, stderr=&#x27;&#x27;)</pre>"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "ZHCJ",
-      "code_hash": "5bd752cde2df334eb9dcbebd00f30bec",
+      "id": "nWHF",
+      "code_hash": "f11bfc0001cf227da1288356708af0b8",
       "outputs": [
         {
           "type": "data",
@@ -209,13 +235,13 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1: loss=1.1391\nAccuracy (Epoch 1): 61.47%\nEpoch 2: loss=0.5330\nAccuracy (Epoch 2): 67.73%\nEpoch 3: loss=0.6939\nAccuracy (Epoch 3): 71.33%\nEpoch 4: loss=0.3693\nAccuracy (Epoch 4): 73.71%\nEpoch 5: loss=0.3905\nAccuracy (Epoch 5): 73.45%\nEpoch 6: loss=0.3286\nAccuracy (Epoch 6): 71.70%\nEpoch 7: loss=0.1739\nAccuracy (Epoch 7): 75.66%\nEpoch 8: loss=0.0465\nAccuracy (Epoch 8): 74.29%\nEpoch 9: loss=0.0578\nAccuracy (Epoch 9): 76.87%\nEpoch 10: loss=0.0321\nAccuracy (Epoch 10): 76.81%\nEpoch 11: loss=0.0139\nAccuracy (Epoch 11): 78.68%\nEpoch 12: loss=0.0107\nAccuracy (Epoch 12): 78.33%\nEpoch 13: loss=0.0055\nAccuracy (Epoch 13): 79.46%\nEpoch 14: loss=0.0009\nAccuracy (Epoch 14): 79.98%\nEpoch 15: loss=0.0007\nAccuracy (Epoch 15): 80.33%\n",
+          "text": "Epoch 1: loss=1.0588\nAccuracy (Epoch 1): 54.56%\nEpoch 2: loss=0.9853\nAccuracy (Epoch 2): 68.89%\nEpoch 3: loss=0.5539\nAccuracy (Epoch 3): 72.16%\nEpoch 4: loss=0.5111\nAccuracy (Epoch 4): 72.32%\nEpoch 5: loss=0.2018\nAccuracy (Epoch 5): 71.97%\nEpoch 6: loss=0.2016\nAccuracy (Epoch 6): 73.79%\nEpoch 7: loss=0.2253\nAccuracy (Epoch 7): 74.32%\nEpoch 8: loss=0.0664\nAccuracy (Epoch 8): 69.29%\nEpoch 9: loss=0.0884\nAccuracy (Epoch 9): 76.37%\nEpoch 10: loss=0.0177\nAccuracy (Epoch 10): 77.05%\nEpoch 11: loss=0.0172\nAccuracy (Epoch 11): 78.46%\nEpoch 12: loss=0.0056\nAccuracy (Epoch 12): 78.22%\nEpoch 13: loss=0.0018\nAccuracy (Epoch 13): 79.54%\nEpoch 14: loss=0.0013\nAccuracy (Epoch 14): 79.91%\nEpoch 15: loss=0.0002\nAccuracy (Epoch 15): 79.75%\nTraining complete. Model saved to ./models/full_model.pth\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "ROlb",
+      "id": "ZHCJ",
       "code_hash": "98402119d6c1e260d719e9bb77ee0200",
       "outputs": [
         {
@@ -228,7 +254,7 @@
       "console": []
     },
     {
-      "id": "qnkX",
+      "id": "ROlb",
       "code_hash": "0c0f7d78edf993efa0c8478d8faa511a",
       "outputs": [
         {
@@ -242,8 +268,41 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Size (full): 44.77 MB\nAccuracy (full): 80.33%\nLatency (full, on CPU): 532.62 \u00b1 22.09 ms\nLatency (full, on GPU): 26.25 \u00b1 0.46 ms\n",
+          "text": "Size (full): 44.77 MB\nAccuracy (full): 79.75%\nLatency (full, on CPU): 550.90 \u00b1 30.45 ms\nLatency (full, on GPU): 26.84 \u00b1 0.05 ms\n",
           "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "LBMM",
+      "code_hash": "dcc26fb14a9b2c2910257ea41698b6b4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"post-training-quantization-ptq\">Post Training Quantization (PTQ)</h2>\n<span class=\"paragraph\">The basic flow is as follow:</span>\n<ol>\n<li>Export the model to to a stable, backend-agnostic format that\u2019s suitable for transformations, optimizations, and deployment.</li>\n<li>Define the quantizer that will prepare the model for quantization. Here I used the X86 for CPU deployments, but there is a simple variant that works better for mobile and edge devices working on ARM CPUs.</li>\n<li>Preparing the model for quantization. For example, folding batch-norm into preceding conv2d operators, and inserting observers in appropriate places to collect activation statistics needed for calibration.</li>\n<li>Running inference on calibration data to collect activation statistics</li>\n<li>Converts calibrated model to a quantized model. While the quantized model already takes less space, it is not yet optimized for the final deployment.</li>\n</ol></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iZkl",
+      "code_hash": "374e933df252a1d53e8f80c2f00eaf59",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "module 'torch.export' has no attribute 'export_for_training'",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_5339/__marimo__cell_iZkl_.py&quot;</span>, line <span class=\"m\">16</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">exported_model</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">export</span><span class=\"o\">.</span><span class=\"n\">export_for_training</span><span class=\"p\">(</span><span class=\"n\">model_to_quantize</span><span class=\"p\">,</span> <span class=\"n\">example_inputs</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">module</span><span class=\"p\">()</span>\n<span class=\"w\">                     </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n<span class=\"gr\">AttributeError</span>: <span class=\"n\">module &#39;torch.export&#39; has no attribute &#39;export_for_training&#39;</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
         }
       ]
     }

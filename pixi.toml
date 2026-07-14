@@ -26,6 +26,7 @@ nbconvert = ">=7.17.1,<8"
 python-lsp-server = ">=1.14.0,<2"
 python-lsp-ruff = ">=2.3.0,<3"
 scikit-learn = ">=1.9.0,<2"
+torchao = ">=0.17.0,<0.18"
 
 [target.default.dependencies]
 pytorch-gpu = ">=2.10"
