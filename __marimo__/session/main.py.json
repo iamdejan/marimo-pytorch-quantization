@@ -1,14 +1,21 @@
 {
   "version": "1",
   "metadata": {
-    "marimo_version": "0.23.13",
+    "marimo_version": "0.23.14",
     "script_metadata_hash": null
   },
   "cells": [
     {
       "id": "Hbol",
       "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -40,13 +47,34 @@
     {
       "id": "bkHC",
       "code_hash": "4c4c4614f4671df61b9ba1668b49cdc6",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "PyTorch Version: 2.12.1\nDevice used: cuda\nShould skip CPU evaluations: False\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "lEQa",
       "code_hash": "04a5c2b1792728a507b19b4df81c37d9",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -65,13 +93,27 @@
     {
       "id": "Xref",
       "code_hash": "9b5a8938b2653adffdd983f1a5849c75",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x7727bddef070&gt;</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "SFPL",
       "code_hash": "88f098dacbbfeb1132b2175603dc7bd1",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -90,7 +132,14 @@
     {
       "id": "RGSE",
       "code_hash": "4d82e6bb79f969679fecb7a97d2b63d0",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -109,7 +158,14 @@
     {
       "id": "emfo",
       "code_hash": "40e63db2172bd1d03466b35374f62a80",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -128,7 +184,14 @@
     {
       "id": "nWHF",
       "code_hash": "8ac44c5cf3d15f08b1beda26b6b6c079",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -147,14 +210,35 @@
     {
       "id": "ZHCJ",
       "code_hash": "bb2894814388648b55a66478082f8f50",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>CompletedProcess(args=[&#x27;mkdir&#x27;, &#x27;-p&#x27;, &#x27;models&#x27;], returncode=0, stdout=&#x27;&#x27;, stderr=&#x27;&#x27;)</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ROlb",
       "code_hash": "f11bfc0001cf227da1288356708af0b8",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Model already trained. Loading from ./models/full_model.pth\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "qnkX",
@@ -172,8 +256,22 @@
     {
       "id": "TqIu",
       "code_hash": "5939b480a62685692cba5c2ac3524f85",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Size (full): 44.77 MB\nAccuracy (full): 79.98%\nLatency (full, on CPU): 547.52 \u00b1 20.68 ms\nLatency (full, on GPU): 26.18 \u00b1 0.11 ms\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "Vxnm",
@@ -191,14 +289,28 @@
     {
       "id": "DnEU",
       "code_hash": "bb5c0f3fa5fce730c6862846bb62ad04",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ulZA",
       "code_hash": "48aa0f5b93b0c43c37fed379ef999d57",
       "outputs": [],
-      "console": []
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Size (quantized): 11.30 MB\n",
+          "mimetype": "text/plain"
+        }
+      ]
     }
   ]
 }
