@@ -1,14 +1,14 @@
 [workspace]
 authors = ["Giovanni Dejan <giovanni.dejan@binus.ac.id>"]
 channels = ["conda-forge"]
-name = "marimo-pixi-template"
-platforms = [{ name = "default", platform = "linux-64", cuda = "12.9" }, { name = "cicd", platform = "linux-64" }]
+name = "marimo-pytorch-quantization"
+platforms = [{ name = "default", platform = "linux-64", cuda = "12.8" }, { name = "cicd", platform = "linux-64" }]
 version = "0.1.0"
 
 [tasks]
-start = "marimo edit --headless --port 3000"
-lint = "marimo check --ignore-scripts ."
-lint-fix = "marimo check --ignore-scripts --fix ."
+start = "CUBLAS_WORKSPACE_CONFIG=:4096:8 marimo edit --headless --port 3000"
+lint = "CUBLAS_WORKSPACE_CONFIG=:4096:8 marimo check --ignore-scripts ."
+lint-fix = "CUBLAS_WORKSPACE_CONFIG=:4096:8 marimo check --ignore-scripts --fix ."
 
 [tasks.execute]
 cmd = "marimo export session {{ notebook_filename }}"
@@ -26,14 +26,13 @@ nbconvert = ">=7.17.1,<8"
 python-lsp-server = ">=1.14.0,<2"
 python-lsp-ruff = ">=2.3.0,<3"
 scikit-learn = ">=1.9.0,<2"
-torchao = ">=0.17.0,<0.18"
 
 [target.default.dependencies]
-pytorch-gpu = ">=2.10"
+pytorch-gpu = ">=2.9, <2.10"
 torchvision = "*"
 
 [target.cicd.dependencies]
-pytorch-cpu = ">=2.10"
+pytorch-cpu = ">=2.9, <2.10"
 torchvision = "*"
 
 [pypi-dependencies]

@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.23.13"
+__generated_with = "0.23.14"
 app = marimo.App(width="medium")
 
 
@@ -77,6 +77,7 @@ def _(np, os, torch):
         random.seed(seed)
         np.random.seed(seed)
         os.environ["PYTHONHASHSEED"] = str(seed)
+        os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
         torch.manual_seed(seed)
         torch.cuda.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)  # For multi-GPU
@@ -353,6 +354,12 @@ def _():
 
 
 @app.cell
+def _(set_seed):
+    set_seed(42)
+    return
+
+
+@app.cell
 def _(get_resnet18_for_cifar10, set_seed, train, train_loader):
     set_seed(42)
     model_to_quantize = get_resnet18_for_cifar10()
@@ -403,32 +410,51 @@ def _(mo):
 
 
 @app.cell
-def _(calibration_loader, model_to_quantize, torch):
-    from torch.ao.quantization import QConfigMapping, get_default_qconfig
-    from torch.ao.quantization.quantize_fx import prepare_fx, convert_fx
+def _(calibration_loader, device, model_to_quantize, torch):
+    from packaging import version
 
-    # Ensure model is on CPU for x86 quantization engine calibration
-    model_to_quantize.cpu()
-    model_to_quantize.eval()
+    from torch.ao.quantization.quantize_pt2e import (
+      prepare_pt2e,
+      convert_pt2e,
+    )
 
-    # 1. Map the configuration targeting x86 CPU architectures
-    # This handles both Conv2d and Linear blocks natively
-    qconfig_mapping = QConfigMapping().set_global(get_default_qconfig("x86"))
+    import torch.ao.quantization.quantizer.x86_inductor_quantizer as xiq
+    from torch.ao.quantization.quantizer.x86_inductor_quantizer import X86InductorQuantizer
 
-    # 2. Prepare the model (fuses modules like Conv+BN and inserts observers)
-    example_inputs = (torch.rand(128, 3, 32, 32),)
-    prepared_model = prepare_fx(model_to_quantize, qconfig_mapping, example_inputs)
+    # batch of 128 images, each with 3 color channels and 32x32 resolution (CIFAR-10)
+    example_inputs = (torch.rand(128, 3, 32, 32).to(device),)
 
-    # 3. Calibrate the model using your activation statistics data loader
+    # export the model to a standardized format before quantization
+    if version.parse(torch.__version__) >= version.parse("2.5"): # for pytorch 2.5+
+        exported_model  = torch.export.export_for_training(model_to_quantize, example_inputs).module()
+    else: # for pytorch 2.4
+        from torch._export import capture_pre_autograd_graph
+        exported_model = capture_pre_autograd_graph(model_to_quantize, example_inputs) 
+
+    # quantization setup for X86 Inductor Quantizer
+    quantizer = X86InductorQuantizer()
+    quantizer.set_global(xiq.get_default_x86_inductor_quantization_config())
+
+    # preparing for PTQ by folding batch-norm into preceding conv2d operators, and inserting observers in appropriate places
+    prepared_model = prepare_pt2e(exported_model, quantizer)
+
+    # run inference on calibration data to collect activation stats needed for activation quantization
     def calibrate(model, data_loader):
+        torch.ao.quantization.move_exported_model_to_eval(model)
         with torch.no_grad():
-            for images, _ in data_loader:
-                model(images.cpu())
-
+            for image, target in data_loader:
+                model(image.to(device))
     calibrate(prepared_model, calibration_loader)
 
-    # 4. Convert the observed weights to actual INT8 precision layers
-    quantized_model = convert_fx(prepared_model)
+    # converts calibrated model to a quantized model
+    quantized_model = convert_pt2e(prepared_model)
+
+    # export again to remove unused weights after quantization
+    if version.parse(torch.__version__) >= version.parse("2.5"): # for pytorch 2.5+
+        quantized_model = torch.export.export_for_training(quantized_model, example_inputs).module()
+    else: # for pytorch 2.4
+        quantized_model = capture_pre_autograd_graph(quantized_model, example_inputs)
+
     return (quantized_model,)
 
 
@@ -448,6 +474,38 @@ def _(
 
     # estimate quantized model latency
     estimate_latency_full(quantized_model, 'quantized', skip_cpu)
+    return
+
+
+@app.cell
+def _(quantized_model, torch):
+    # enable the use of the C++ wrapper for TorchInductor which reduces Python overhead
+    import torch._inductor.config as config
+    config.cpp_wrapper = True
+
+    # compiles quantized model to generate optimized model
+    with torch.no_grad():
+        optimized_model = torch.compile(quantized_model)
+
+    return (optimized_model,)
+
+
+@app.cell
+def _(
+    estimate_latency_full,
+    evaluate,
+    optimized_model,
+    print_size_of_model,
+    skip_cpu,
+):
+    # get optimized model size
+    print_size_of_model(optimized_model, "optimized")
+
+    # evaluate optimized accuracy
+    evaluate(optimized_model, 'optimized')
+
+    # estimate optimized model latency
+    estimate_latency_full(optimized_model, 'optimized', skip_cpu)
 
     return
 
