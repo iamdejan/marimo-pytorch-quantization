@@ -59,26 +59,13 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "PyTorch Version: 2.9.1\nDevice used: cuda\nShould skip CPU evaluations: False\n",
+          "text": "PyTorch Version: 2.6.0\nDevice used: cuda\nShould skip CPU evaluations: False\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
       "id": "lEQa",
-      "code_hash": "c3bf342540deaa1c61bd8eef2c060bf8",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "PKri",
       "code_hash": "d0b55859d7c7b7f3ee04f39ee5a39a2f",
       "outputs": [
         {
@@ -91,21 +78,8 @@
       "console": []
     },
     {
-      "id": "Xref",
-      "code_hash": "9b5a8938b2653adffdd983f1a5849c75",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/html": "<pre class='text-xs'>&lt;torch._C.Generator object at 0x797cda4dd4b0&gt;</pre>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "SFPL",
-      "code_hash": "88f098dacbbfeb1132b2175603dc7bd1",
+      "id": "PKri",
+      "code_hash": "d461e1b2788f4b3cd67c8da96513ac00",
       "outputs": [
         {
           "type": "data",
@@ -117,7 +91,7 @@
       "console": []
     },
     {
-      "id": "BYtC",
+      "id": "Xref",
       "code_hash": "48fb14cfe38044b396cbb5ef99da0d63",
       "outputs": [
         {
@@ -130,7 +104,7 @@
       "console": []
     },
     {
-      "id": "RGSE",
+      "id": "SFPL",
       "code_hash": "4d82e6bb79f969679fecb7a97d2b63d0",
       "outputs": [
         {
@@ -143,7 +117,7 @@
       "console": []
     },
     {
-      "id": "Kclp",
+      "id": "BYtC",
       "code_hash": "11524686558fefce980950e6455fbe67",
       "outputs": [
         {
@@ -156,7 +130,7 @@
       "console": []
     },
     {
-      "id": "emfo",
+      "id": "RGSE",
       "code_hash": "40e63db2172bd1d03466b35374f62a80",
       "outputs": [
         {
@@ -169,7 +143,7 @@
       "console": []
     },
     {
-      "id": "Hstk",
+      "id": "Kclp",
       "code_hash": "71ade1e0fba4124122547f178a4527ad",
       "outputs": [
         {
@@ -182,7 +156,7 @@
       "console": []
     },
     {
-      "id": "nWHF",
+      "id": "emfo",
       "code_hash": "8ac44c5cf3d15f08b1beda26b6b6c079",
       "outputs": [
         {
@@ -195,7 +169,7 @@
       "console": []
     },
     {
-      "id": "iLit",
+      "id": "Hstk",
       "code_hash": "a9ab528cf49ef1a62e957ce8c5885147",
       "outputs": [
         {
@@ -208,7 +182,7 @@
       "console": []
     },
     {
-      "id": "ZHCJ",
+      "id": "nWHF",
       "code_hash": "bb2894814388648b55a66478082f8f50",
       "outputs": [
         {
@@ -221,21 +195,8 @@
       "console": []
     },
     {
-      "id": "ROlb",
-      "code_hash": "76a2b4c9cc047b1a781a21e0fbbc71fe",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "qnkX",
-      "code_hash": "f11bfc0001cf227da1288356708af0b8",
+      "id": "iLit",
+      "code_hash": "f8405f8051a692286523ed3c2b3fa68c",
       "outputs": [
         {
           "type": "data",
@@ -248,13 +209,13 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1: loss=1.0406\nAccuracy (Epoch 1): 50.86%\nEpoch 2: loss=0.9551\nAccuracy (Epoch 2): 65.34%\nEpoch 3: loss=0.7071\nAccuracy (Epoch 3): 73.21%\nEpoch 4: loss=0.4182\nAccuracy (Epoch 4): 69.85%\nEpoch 5: loss=0.3120\nAccuracy (Epoch 5): 75.35%\nEpoch 6: loss=0.1634\nAccuracy (Epoch 6): 73.43%\nEpoch 7: loss=0.1138\nAccuracy (Epoch 7): 73.52%\nEpoch 8: loss=0.0594\nAccuracy (Epoch 8): 75.90%\nEpoch 9: loss=0.0597\nAccuracy (Epoch 9): 75.49%\nEpoch 10: loss=0.0254\nAccuracy (Epoch 10): 76.92%\nEpoch 11: loss=0.0374\nAccuracy (Epoch 11): 78.66%\nEpoch 12: loss=0.0029\nAccuracy (Epoch 12): 78.70%\nEpoch 13: loss=0.0031\nAccuracy (Epoch 13): 80.11%\nEpoch 14: loss=0.0037\nAccuracy (Epoch 14): 80.35%\nEpoch 15: loss=0.0005\nAccuracy (Epoch 15): 80.32%\nTraining complete. Model saved to ./models/full_model.pth\n",
+          "text": "Model already trained. Loading from ./models/full_model.pth\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "TqIu",
+      "id": "ZHCJ",
       "code_hash": "98402119d6c1e260d719e9bb77ee0200",
       "outputs": [
         {
@@ -267,7 +228,7 @@
       "console": []
     },
     {
-      "id": "Vxnm",
+      "id": "ROlb",
       "code_hash": "5939b480a62685692cba5c2ac3524f85",
       "outputs": [
         {
@@ -281,13 +242,13 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Size (full): 44.77 MB\nAccuracy (full): 80.32%\nLatency (full, on CPU): 611.27 \u00b1 19.87 ms\nLatency (full, on GPU): 26.20 \u00b1 0.21 ms\n",
+          "text": "Size (full): 44.77 MB\nAccuracy (full): 80.36%\nLatency (full, on CPU): 601.47 \u00b1 13.68 ms\nLatency (full, on GPU): 25.29 \u00b1 0.15 ms\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "DnEU",
+      "id": "qnkX",
       "code_hash": "dcc26fb14a9b2c2910257ea41698b6b4",
       "outputs": [
         {
@@ -300,8 +261,8 @@
       "console": []
     },
     {
-      "id": "ulZA",
-      "code_hash": "3c8f8b6fe4099f8ae40909dc705c0bd4",
+      "id": "TqIu",
+      "code_hash": "9fd98a12d1742c61d50c600aabbd2ea3",
       "outputs": [
         {
           "type": "data",
@@ -314,14 +275,14 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "/tmp/marimo_13773/__marimo__cell_ulZA_.py:16: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  exported_model  = torch.export.export_for_training(model_to_quantize, example_inputs).module()\n/tmp/marimo_13773/__marimo__cell_ulZA_.py:26: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. \nFor migrations of users: \n1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead \n2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) \n3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) \nsee https://github.com/pytorch/ao/issues/2259 for more details\n  prepared_model = prepare_pt2e(exported_model, quantizer)\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_1) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_2) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_3) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_4) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_5) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_6) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_7) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_8) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_9) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_10) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_11) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_12) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_13) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_14) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_15) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_16) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_17) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_18) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1264: UserWarning: erase_node(batch_norm_19) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/tmp/marimo_13773/__marimo__cell_ulZA_.py:37: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. \nFor migrations of users: \n1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead \n2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) \n3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) \nsee https://github.com/pytorch/ao/issues/2259 for more details\n  quantized_model = convert_pt2e(prepared_model)\n/tmp/marimo_13773/__marimo__cell_ulZA_.py:41: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  quantized_model = torch.export.export_for_training(quantized_model, example_inputs).module()\n",
+          "text": "/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_1) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_2) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_3) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_4) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_5) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_6) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_7) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_8) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_9) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_10) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_11) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_12) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_13) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_14) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_15) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_16) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_17) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_18) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/fx/graph.py:1199: UserWarning: erase_node(batch_norm_19) on an already erased node\n  warnings.warn(f\"erase_node({to_erase}) on an already erased node\")\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "ecfG",
-      "code_hash": "48aa0f5b93b0c43c37fed379ef999d57",
+      "id": "Vxnm",
+      "code_hash": "afdfb0bdbdc6a366034c1b9df8b82329",
       "outputs": [
         {
           "type": "data",
@@ -334,26 +295,27 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Size (quantized): 44.69 MB\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/ao/quantization/pt2e/utils.py:359: FutureWarning: `torch.export.export_for_training` is deprecated and will be removed in PyTorch 2.10. Please use `torch.export.export` instead, which is functionally equivalent.\n  aten_pattern = torch.export.export_for_training(\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Accuracy (quantized): 80.32%\nLatency (quantized, on CPU): 538.29 \u00b1 16.64 ms\nLatency (quantized, on GPU): 24.84 \u00b1 0.20 ms\n",
+          "text": "Size (quantized): 11.27 MB\nAccuracy (quantized): 80.24%\nLatency (quantized, on CPU): 1031.24 \u00b1 45.81 ms\nLatency (quantized, on GPU): 45.04 \u00b1 2.15 ms\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "VFkK",
-      "code_hash": "6f415ecf0a3d6ed522622994c45498d9",
+      "id": "RWxf",
+      "code_hash": "d912147b3b12730ed90d445c32a5fdba",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"compile-ptq-model\">Compile PTQ Model</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "6372a1233ec2c8b406bb7dc968877b10",
       "outputs": [
         {
           "type": "data",
@@ -365,34 +327,22 @@
       "console": []
     },
     {
-      "id": "iRMD",
-      "code_hash": "54d9cce6ac555ec46189d5254a67f2e7",
+      "id": "ulZA",
+      "code_hash": "bff1cd8dd7e7b19cda55ceea019a606d",
       "outputs": [
         {
-          "type": "error",
-          "ename": "exception",
-          "evalue": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpcfw2l2j5/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpcfw2l2j5/cuda_utils.cpython-313-x86_64-linux-gnu.so', '-lcuda', '-L/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/backends/nvidia/lib', '-L/usr/lib/wsl/lib', '-I/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpcfw2l2j5', '-I/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/include/python3.13', '-I/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/targets/x86_64-linux/include']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"",
-          "traceback": null
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
         }
       ],
       "console": [
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Size (optimized): 44.69 MB\n",
+          "text": "Size (optimized): 11.27 MB\nAccuracy (optimized): 78.75%\nLatency (optimized, on CPU): 935.49 \u00b1 2668.72 ms\nLatency (optimized, on GPU): 24.60 \u00b1 0.78 ms\n",
           "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "/tmp/tmpck1jk_ur/cuda_utils.c:1:10: fatal error: cuda.h: No such file or directory\n    1 | #include \"cuda.h\"\n      |          ^~~~~~~~\ncompilation terminated.\n/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/compile_fx.py:312: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.\n  warnings.warn(\nW0714 23:50:16.153000 13773 .pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/utils.py:1613] [48/0] Not enough SMs to use max_autotune_gemm mode\n/tmp/tmpcfw2l2j5/cuda_utils.c:1:10: fatal error: cuda.h: No such file or directory\n    1 | #include \"cuda.h\"\n      |          ^~~~~~~~\ncompilation terminated.\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_13773/__marimo__cell_iRMD_.py&quot;</span>, line <span class=\"m\">5</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">evaluate</span><span class=\"p\">(</span><span class=\"n\">optimized_model</span><span class=\"p\">,</span> <span class=\"s1\">&#39;optimized&#39;</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_13773/__marimo__cell_emfo_.py&quot;</span>, line <span class=\"m\">58</span>, in <span class=\"n\">evaluate</span>\n<span class=\"w\">    </span><span class=\"n\">preds</span> <span class=\"o\">=</span> <span class=\"n\">model</span><span class=\"p\">(</span><span class=\"n\">x</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">argmax</span><span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"p\">)</span>\n<span class=\"w\">            </span><span class=\"pm\">~~~~~^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py&quot;</span>, line <span class=\"m\">414</span>, in <span class=\"n\">__call__</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"o\">.</span><span class=\"fm\">__call__</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/nn/modules/module.py&quot;</span>, line <span class=\"m\">1775</span>, in <span class=\"n\">_wrapped_call_impl</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_call_impl</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/nn/modules/module.py&quot;</span>, line <span class=\"m\">1786</span>, in <span class=\"n\">_call_impl</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">forward_call</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py&quot;</span>, line <span class=\"m\">845</span>, in <span class=\"n\">compile_wrapper</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">e</span><span class=\"o\">.</span><span class=\"n\">remove_dynamo_frames</span><span class=\"p\">()</span> <span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"kc\">None</span>  <span class=\"c1\"># see TORCHDYNAMO_VERBOSE=1</span>\n<span class=\"w\">    </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/compile_fx.py&quot;</span>, line <span class=\"m\">990</span>, in <span class=\"n\">_compile_fx_inner</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">InductorError</span><span class=\"p\">(</span><span class=\"n\">e</span><span class=\"p\">,</span> <span class=\"n\">currentframe</span><span class=\"p\">())</span><span class=\"o\">.</span><span class=\"n\">with_traceback</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"n\">e</span><span class=\"o\">.</span><span class=\"n\">__traceback__</span>\n<span class=\"w\">    </span><span class=\"p\">)</span> <span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"kc\">None</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/compile_fx.py&quot;</span>, line <span class=\"m\">974</span>, in <span class=\"n\">_compile_fx_inner</span>\n<span class=\"w\">    </span><span class=\"n\">mb_compiled_graph</span> <span class=\"o\">=</span> <span class=\"n\">fx_codegen_and_compile</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"n\">gm</span><span class=\"p\">,</span> <span class=\"n\">example_inputs</span><span class=\"p\">,</span> <span class=\"n\">inputs_to_check</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">graph_kwargs</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/compile_fx.py&quot;</span>, line <span class=\"m\">1695</span>, in <span class=\"n\">fx_codegen_and_compile</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">scheme</span><span class=\"o\">.</span><span class=\"n\">codegen_and_compile</span><span class=\"p\">(</span><span class=\"n\">gm</span><span class=\"p\">,</span> <span class=\"n\">example_inputs</span><span class=\"p\">,</span> <span class=\"n\">inputs_to_check</span><span class=\"p\">,</span> <span class=\"n\">graph_kwargs</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/compile_fx.py&quot;</span>, line <span class=\"m\">1505</span>, in <span class=\"n\">codegen_and_compile</span>\n<span class=\"w\">    </span><span class=\"n\">compiled_module</span> <span class=\"o\">=</span> <span class=\"n\">graph</span><span class=\"o\">.</span><span class=\"n\">compile_to_module</span><span class=\"p\">()</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/graph.py&quot;</span>, line <span class=\"m\">2319</span>, in <span class=\"n\">compile_to_module</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_compile_to_module</span><span class=\"p\">()</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/graph.py&quot;</span>, line <span class=\"m\">2325</span>, in <span class=\"n\">_compile_to_module</span>\n<span class=\"w\">    </span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">codegen_with_cpp_wrapper</span><span class=\"p\">()</span> <span class=\"k\">if</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">cpp_wrapper</span> <span class=\"k\">else</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">codegen</span><span class=\"p\">()</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/graph.py&quot;</span>, line <span class=\"m\">2220</span>, in <span class=\"n\">codegen_with_cpp_wrapper</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">codegen</span><span class=\"p\">()</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/graph.py&quot;</span>, line <span class=\"m\">2264</span>, in <span class=\"n\">codegen</span>\n<span class=\"w\">    </span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">scheduler</span><span class=\"o\">.</span><span class=\"n\">codegen</span><span class=\"p\">()</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/scheduler.py&quot;</span>, line <span class=\"m\">5199</span>, in <span class=\"n\">codegen</span>\n<span class=\"w\">    </span><span class=\"k\">else</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_codegen</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">nodes</span><span class=\"p\">)</span>\n<span class=\"w\">         </span><span class=\"pm\">~~~~~~~~~~~~~^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/scheduler.py&quot;</span>, line <span class=\"m\">5435</span>, in <span class=\"n\">_codegen</span>\n<span class=\"w\">    </span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">get_backend</span><span class=\"p\">(</span><span class=\"n\">device</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">codegen_node</span><span class=\"p\">(</span><span class=\"n\">node</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/codegen/cuda_combined_scheduling.py&quot;</span>, line <span class=\"m\">127</span>, in <span class=\"n\">codegen_node</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_triton_scheduling</span><span class=\"o\">.</span><span class=\"n\">codegen_node</span><span class=\"p\">(</span><span class=\"n\">node</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/codegen/simd.py&quot;</span>, line <span class=\"m\">1402</span>, in <span class=\"n\">codegen_node</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">codegen_node_schedule</span><span class=\"p\">(</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~~^</span>\n<span class=\"w\">    </span>    <span class=\"n\">SIMDKernelFeatures</span><span class=\"p\">(</span><span class=\"n\">node_schedule</span><span class=\"p\">,</span> <span class=\"n\">numel</span><span class=\"p\">,</span> <span class=\"n\">rnumel</span><span class=\"p\">,</span> <span class=\"n\">coalesce_analysis</span><span class=\"p\">)</span>\n<span class=\"w\">        </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/codegen/simd.py&quot;</span>, line <span class=\"m\">1465</span>, in <span class=\"n\">codegen_node_schedule</span>\n<span class=\"w\">    </span><span class=\"n\">src_code</span> <span class=\"o\">=</span> <span class=\"n\">kernel</span><span class=\"o\">.</span><span class=\"n\">codegen_kernel</span><span class=\"p\">()</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/codegen/triton.py&quot;</span>, line <span class=\"m\">4173</span>, in <span class=\"n\">codegen_kernel</span>\n<span class=\"w\">    </span><span class=\"o\">**</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">inductor_meta_common</span><span class=\"p\">(),</span>\n<span class=\"w\">      </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/_inductor/codegen/triton.py&quot;</span>, line <span class=\"m\">3992</span>, in <span class=\"n\">inductor_meta_common</span>\n<span class=\"w\">    </span><span class=\"s2\">&quot;backend_hash&quot;</span><span class=\"p\">:</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">utils</span><span class=\"o\">.</span><span class=\"n\">_triton</span><span class=\"o\">.</span><span class=\"n\">triton_hash_with_backend</span><span class=\"p\">(),</span>\n<span class=\"w\">                    </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/utils/_triton.py&quot;</span>, line <span class=\"m\">175</span>, in <span class=\"n\">triton_hash_with_backend</span>\n<span class=\"w\">    </span><span class=\"n\">backend</span> <span class=\"o\">=</span> <span class=\"n\">triton_backend</span><span class=\"p\">()</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/torch/utils/_triton.py&quot;</span>, line <span class=\"m\">167</span>, in <span class=\"n\">triton_backend</span>\n<span class=\"w\">    </span><span class=\"n\">target</span> <span class=\"o\">=</span> <span class=\"n\">driver</span><span class=\"o\">.</span><span class=\"n\">active</span><span class=\"o\">.</span><span class=\"n\">get_current_target</span><span class=\"p\">()</span>\n<span class=\"w\">             </span><span class=\"pm\">^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/runtime/driver.py&quot;</span>, line <span class=\"m\">28</span>, in <span class=\"n\">active</span>\n<span class=\"w\">    </span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_active</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">default</span>\n<span class=\"w\">                   </span><span class=\"pm\">^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/runtime/driver.py&quot;</span>, line <span class=\"m\">22</span>, in <span class=\"n\">default</span>\n<span class=\"w\">    </span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_default</span> <span class=\"o\">=</span> <span class=\"n\">_create_driver</span><span class=\"p\">()</span>\n<span class=\"w\">                    </span><span class=\"pm\">~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/runtime/driver.py&quot;</span>, line <span class=\"m\">10</span>, in <span class=\"n\">_create_driver</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">active_drivers</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]()</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/backends/nvidia/driver.py&quot;</span>, line <span class=\"m\">720</span>, in <span class=\"n\">__init__</span>\n<span class=\"w\">    </span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">utils</span> <span class=\"o\">=</span> <span class=\"n\">CudaUtils</span><span class=\"p\">()</span>  <span class=\"c1\"># TODO: make static</span>\n<span class=\"w\">                 </span><span class=\"pm\">~~~~~~~~~^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/backends/nvidia/driver.py&quot;</span>, line <span class=\"m\">63</span>, in <span class=\"n\">__init__</span>\n<span class=\"w\">    </span><span class=\"n\">mod</span> <span class=\"o\">=</span> <span class=\"n\">compile_module_from_src</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"n\">src</span><span class=\"o\">=</span><span class=\"n\">Path</span><span class=\"p\">(</span><span class=\"n\">os</span><span class=\"o\">.</span><span class=\"n\">path</span><span class=\"o\">.</span><span class=\"n\">join</span><span class=\"p\">(</span><span class=\"n\">dirname</span><span class=\"p\">,</span> <span class=\"s2\">&quot;driver.c&quot;</span><span class=\"p\">))</span><span class=\"o\">.</span><span class=\"n\">read_text</span><span class=\"p\">(),</span>\n<span class=\"w\">    </span><span class=\"o\">...&lt;</span><span class=\"mi\">3</span> <span class=\"n\">lines</span><span class=\"o\">&gt;...</span>\n<span class=\"w\">    </span>    <span class=\"n\">libraries</span><span class=\"o\">=</span><span class=\"n\">libraries</span><span class=\"p\">,</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/runtime/build.py&quot;</span>, line <span class=\"m\">111</span>, in <span class=\"n\">compile_module_from_src</span>\n<span class=\"w\">    </span><span class=\"n\">so</span> <span class=\"o\">=</span> <span class=\"n\">_build</span><span class=\"p\">(</span><span class=\"n\">name</span><span class=\"p\">,</span> <span class=\"n\">src_path</span><span class=\"p\">,</span> <span class=\"n\">tmpdir</span><span class=\"p\">,</span> <span class=\"n\">library_dirs</span> <span class=\"ow\">or</span> <span class=\"p\">[],</span> <span class=\"n\">include_dirs</span> <span class=\"ow\">or</span> <span class=\"p\">[],</span> <span class=\"n\">libraries</span> <span class=\"ow\">or</span> <span class=\"p\">[],</span> <span class=\"n\">ccflags</span> <span class=\"ow\">or</span> <span class=\"p\">[])</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/runtime/build.py&quot;</span>, line <span class=\"m\">73</span>, in <span class=\"n\">_build</span>\n<span class=\"w\">    </span><span class=\"n\">subprocess</span><span class=\"o\">.</span><span class=\"n\">check_call</span><span class=\"p\">(</span><span class=\"n\">cc_cmd</span><span class=\"p\">,</span> <span class=\"n\">stdout</span><span class=\"o\">=</span><span class=\"n\">subprocess</span><span class=\"o\">.</span><span class=\"n\">DEVNULL</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/subprocess.py&quot;</span>, line <span class=\"m\">419</span>, in <span class=\"n\">check_call</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">CalledProcessError</span><span class=\"p\">(</span><span class=\"n\">retcode</span><span class=\"p\">,</span> <span class=\"n\">cmd</span><span class=\"p\">)</span>\n<span class=\"gr\">torch._inductor.exc.InductorError</span>: <span class=\"n\">CalledProcessError: Command &#39;[&#39;/usr/bin/gcc&#39;, &#39;/tmp/tmpcfw2l2j5/cuda_utils.c&#39;, &#39;-O3&#39;, &#39;-shared&#39;, &#39;-fPIC&#39;, &#39;-Wno-psabi&#39;, &#39;-o&#39;, &#39;/tmp/tmpcfw2l2j5/cuda_utils.cpython-313-x86_64-linux-gnu.so&#39;, &#39;-lcuda&#39;, &#39;-L/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/backends/nvidia/lib&#39;, &#39;-L/usr/lib/wsl/lib&#39;, &#39;-I/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/lib/python3.13/site-packages/triton/backends/nvidia/include&#39;, &#39;-I/tmp/tmpcfw2l2j5&#39;, &#39;-I/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/include/python3.13&#39;, &#39;-I/home/dejan/VSCodeProjects/marimo-pytorch-quantization/.pixi/envs/default/targets/x86_64-linux/include&#39;]&#39; returned non-zero exit status 1.</span>\n\n<span class=\"x\">Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you&#39;re reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=&quot;+dynamo&quot;</span>\n</pre></div>\n</span>",
-          "mimetype": "application/vnd.marimo+traceback"
         }
       ]
     }

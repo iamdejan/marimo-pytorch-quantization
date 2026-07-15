@@ -2,7 +2,7 @@
 authors = ["Giovanni Dejan <giovanni.dejan@binus.ac.id>"]
 channels = ["conda-forge"]
 name = "marimo-pytorch-quantization"
-platforms = [{ name = "default", platform = "linux-64", cuda = "12.8" }, { name = "cicd", platform = "linux-64" }]
+platforms = [{ name = "default", platform = "linux-64", cuda = "12.4" }, { name = "cicd", platform = "linux-64" }]
 version = "0.1.0"
 
 [tasks]
@@ -28,11 +28,13 @@ python-lsp-ruff = ">=2.3.0,<3"
 scikit-learn = ">=1.9.0,<2"
 
 [target.default.dependencies]
-pytorch-gpu = ">=2.9, <2.10"
+pytorch-gpu = "=2.6.0"
 torchvision = "*"
+cuda-nvcc = "*"
+cuda-cudart-dev = "*"
 
 [target.cicd.dependencies]
-pytorch-cpu = ">=2.9, <2.10"
+pytorch-cpu = "=2.6.0"
 torchvision = "*"
 
 [pypi-dependencies]
