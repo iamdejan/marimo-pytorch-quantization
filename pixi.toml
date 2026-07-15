@@ -6,9 +6,9 @@ platforms = [{ name = "default", platform = "linux-64", cuda = "12.4" }, { name 
 version = "0.1.0"
 
 [tasks]
-start = "CUBLAS_WORKSPACE_CONFIG=:4096:8 marimo edit --headless --port 3000"
-lint = "CUBLAS_WORKSPACE_CONFIG=:4096:8 marimo check --ignore-scripts ."
-lint-fix = "CUBLAS_WORKSPACE_CONFIG=:4096:8 marimo check --ignore-scripts --fix ."
+start = "marimo edit --headless --port 3000"
+lint = "marimo check --ignore-scripts ."
+lint-fix = "marimo check --ignore-scripts --fix ."
 
 [tasks.execute]
 cmd = "marimo export session {{ notebook_filename }}"
